@@ -1,21 +1,21 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaTelegram, FaFacebook, FaInstagram } from 'react-icons/fa'
 
 const SocialLinks = ({ className = '', iconSize = 24 }) => {
   const socials = [
-    { icon: FaGithub, href: '#', label: 'GitHub' },
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-    { icon: FaTwitter, href: '#', label: 'Twitter' },
+    { icon: FaGithub, href: 'https://github.com/henglongchhor', label: 'GitHub' },
+    { icon: FaTelegram, href: '#', label: 'Telegram' },
     { icon: FaInstagram, href: '#', label: 'Instagram' },
+    { icon: FaFacebook, href: '#', label: 'facebook' },
   ]
 
   return (
-    <div className={`flex gap-4 ${className}`}>
+    <div className={`flex gap-1 ${className}`}>
       {socials.map((social) => (
         <a
           key={social.label}
           href={social.href}
-          className="p-3 text-gray-500 hover:text-gray-950 hover:bg-gray-200 rounded-full transition-all duration-300 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
+          className="p-3 text-blue-600 hover:text-blue-500 hover:bg-gray-200 rounded-full transition-all duration-300 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
           aria-label={social.label}
         >
           <social.icon size={iconSize} />

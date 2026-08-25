@@ -13,10 +13,10 @@ const ExperienceCard = ({ experience, isLast = false }) => {
       </div>
 
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{experience.position}</h3>
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{experience.company}</h3>
         <span className="text-primary-400 text-sm font-medium">{experience.period}</span>
       </div>
-      <h4 className="text-gray-600 mb-3 dark:text-gray-400">{experience.company}</h4>
+      <h4 className="text-gray-600 mb-3 dark:text-gray-400">{experience.position}</h4>
       <p className="text-gray-600 text-sm leading-relaxed dark:text-gray-400">
         {experience.description}
       </p>

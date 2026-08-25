@@ -11,7 +11,7 @@ const Experience = () => {
       <Container>
         <SectionTitle
           badge="Experience"
-          title="Work Experience"
+          title="My Experience"
           subtitle="My professional journey"
         />
 

@@ -29,12 +29,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <Button variant="secondary" size="lg">
-            View All Projects
-          </Button>
-        </div>
       </Container>
     </section>
   )

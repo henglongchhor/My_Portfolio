@@ -1,8 +1,8 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { FaGraduationCap } from 'react-icons/fa'
 import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
+import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
 import { education } from '../data/education'
 
 const Education = () => {
@@ -15,35 +15,55 @@ const Education = () => {
           subtitle="My academic background"
         />
 
-        <div className="max-w-4xl mx-auto mt-12 space-y-6">
+        <ScrollStack
+          className="mx-auto max-w-4xl"
+          useWindowScroll
+          itemDistance={110}
+          itemScale={0.025}
+          itemStackDistance={26}
+          stackPosition="18%"
+          scaleEndPosition="8%"
+          baseScale={0.9}
+          blurAmount={0.35}
+        >
           {education.map((edu, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="glass-effect rounded-2xl p-6 relative pl-12"
+            <ScrollStackItem
+              key={edu.degree}
+              itemClassName="overflow-hidden border border-white/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-gray-900/90"
             >
-              {index < education.length - 1 && (
-                <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-linear-to-b from-primary-500 to-primary-600 opacity-30" />
-              )}
-              
-              <div className="absolute left-0 top-6 -translate-x-1/2 w-12 h-12 rounded-full bg-linear-to-r from-primary-500 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/30">
-                <FaGraduationCap className="text-white" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-primary-400 via-primary-500 to-violet-500" />
+              <div className="pointer-events-none absolute -right-10 -top-16 text-[10rem] font-bold leading-none text-primary-500/5 dark:text-primary-400/5">
+                {String(index + 1).padStart(2, '0')}
               </div>
 
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
-                <span className="text-primary-400 text-sm font-medium">{edu.period}</span>
+              <div className="relative flex min-h-56 flex-col">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-500 text-white shadow-lg shadow-primary-500/25">
+                    <FaGraduationCap size={20} />
+                  </div>
+                  <span className="rounded-full border border-primary-500/20 bg-primary-500/10 px-3 py-1.5 text-xs font-semibold tracking-wide text-primary-600 dark:text-primary-300">
+                    {edu.period}
+                  </span>
+                </div>
+
+                <div className="mt-auto pt-8">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary-500">
+                    Education {String(index + 1).padStart(2, '0')}
+                  </p>
+                  <h3 className="text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl dark:text-white">
+                    {edu.degree}
+                  </h3>
+                  <p className="mt-2 text-sm font-semibold text-gray-700 sm:text-base dark:text-gray-300">
+                    {edu.institution}
+                  </p>
+                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base dark:text-gray-400">
+                    {edu.description}
+                  </p>
+                </div>
               </div>
-              <h4 className="text-gray-600 mb-2 dark:text-gray-400">{edu.institution}</h4>
-              <p className="text-gray-600 text-sm leading-relaxed dark:text-gray-400">
-                {edu.description}
-              </p>
-            </motion.div>
+            </ScrollStackItem>
           ))}
-        </div>
+        </ScrollStack>
       </Container>
     </section>
   )

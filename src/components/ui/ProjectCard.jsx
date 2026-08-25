@@ -15,14 +15,11 @@ const ProjectCard = ({ project }) => {
           }}
         />
         <div className="absolute inset-0 bg-linear-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
             <a href={project.demoLink} className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors">
-              <FaExternalLinkAlt className="text-white" />
+              
             </a>
-            <a href={project.codeLink} className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors">
-              <FaGithub className="text-white" />
-            </a>
-          </div>
+          </div> */}
         </div>
       </div>
       
@@ -37,7 +34,9 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         <Button variant="outline" size="sm" fullWidth>
-          View Details
+          <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+            view demo 
+            </a>
         </Button>
       </div>
     </div>

@@ -61,16 +61,6 @@ const Hero = () => {
               digital experiences. Specializing in React, Node.js, and modern web technologies.
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
-            >
-              <Button variant="primary" size="lg">Get in Touch</Button>
-              <Button variant="outline" size="lg">View Projects</Button>
-            </motion.div>
-
             <SocialLinks className="justify-center lg:justify-start" />
           </motion.div>
 

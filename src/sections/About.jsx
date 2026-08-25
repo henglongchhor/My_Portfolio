@@ -6,10 +6,9 @@ import Button from '../components/common/Button'
 
 const About = () => {
   const stats = [
-    { label: 'Years Experience', value: '5+' },
-    { label: 'Projects Completed', value: '50+' },
-    { label: 'Happy Clients', value: '30+' },
-    { label: 'Countries', value: '10+' },
+    { label: 'Years Experience', value: '1+' },
+    { label: 'Projects Completed', value: '10+' },
+    { label: 'Programming Languages', value: '5+' },
   ]
 
   return (
@@ -41,7 +40,7 @@ const About = () => {
               the latest industry trends.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary">Download CV</Button>
+              <Button variant="primary"><a href="/public/CV/CV_Heng_Longchhor.docx" download>Download CV</a></Button>
               <Button variant="outline">Contact Me</Button>
             </div>
           </motion.div>
@@ -60,7 +59,9 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="glass-effect p-6 rounded-2xl text-center"
+                className={`glass-effect p-6 rounded-2xl text-center ${
+                  index === stats.length - 1 ? 'col-span-2 justify-self-center' : ''
+                }`}
               >
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                   {stat.value}
