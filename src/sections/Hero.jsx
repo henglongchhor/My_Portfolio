@@ -3,14 +3,31 @@ import { motion } from 'framer-motion'
 import Button from '../components/common/Button'
 import Container from '../components/common/Container'
 import SocialLinks from '../components/common/SocialLinks'
+import TextType from '../components/ui/TextType'
+import Lightfall from '../components/Lightfall'
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-b from-slate-50 via-white to-primary-100/60 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20" />
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-600/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
+        <Lightfall
+          className="absolute inset-0 opacity-45 dark:opacity-80"
+          colors={['#A5B4FC', '#6366F1', '#8B5CF6', '#C084FC']}
+          backgroundColor="#111827"
+          speed={0.35}
+          streakCount={4}
+          streakWidth={1.2}
+          streakLength={1.4}
+          glow={0.9}
+          density={0.7}
+          twinkle={0.75}
+          zoom={2.8}
+          backgroundGlow={0.35}
+          mouseInteraction
+          mouseStrength={0.6}
+          mouseRadius={0.9}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-white/55 dark:bg-gray-950/35" />
       </div>
 
       <Container className="relative z-10">
@@ -36,8 +53,20 @@ const Hero = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
             >
-              Hi, I'm{' '}
-              <span className="gradient-text">John Doe</span>
+              Hi, I'm
+              <br />
+              <TextType
+                text={["Heng Longchhor"]}
+                typingSpeed={130}
+                deletingSpeed={80}
+                pauseDuration={2000}
+                initialDelay={500}
+                loop
+                showCursor
+                cursorCharacter="_"
+                cursorBlinkDuration={0.5}
+                className="gradient-text"
+              />
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl text-gray-600 dark:text-gray-400">
                 Full Stack Developer
@@ -76,7 +105,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/20 bg-linear-to-br from-primary-100 to-primary-300 dark:from-primary-950 dark:to-gray-800">
                 <img
-                  src="/images/profile.webp"
+                  src="/Hero/image.png"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   onError={(e) => {
