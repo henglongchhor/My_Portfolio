@@ -40,7 +40,7 @@ const About = () => {
               the latest industry trends.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary"><a href="/public/CV/CV_Heng_Longchhor.docx" download>Download CV</a></Button>
+              <Button variant="primary"><a href="/CV/CV_Heng_Longchhor.docx" download>Download CV</a></Button>
               <Button variant="outline">Contact Me</Button>
             </div>
           </motion.div>
