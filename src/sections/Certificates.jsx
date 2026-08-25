@@ -29,7 +29,7 @@ const Certificates = () => {
                 <FaCertificate />
               </div>
               <h4 className="text-lg font-semibold mb-2">{cert.name}</h4>
-              <p className="text-gray-400 text-sm">{cert.issuer}</p>
+              <p className="text-gray-600 text-sm dark:text-gray-400">{cert.issuer}</p>
               <p className="text-primary-400 text-sm mt-2">{cert.date}</p>
               <a 
                 href={cert.link} 

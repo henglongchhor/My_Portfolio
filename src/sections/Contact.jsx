@@ -27,7 +27,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-gray-800/30">
+    <section id="contact" className="section-padding bg-slate-100/80 dark:bg-gray-800/30">
       <Container>
         <SectionTitle
           badge="Contact"
@@ -37,8 +37,8 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mt-12">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white">Let's Talk</h3>
-            <p className="text-gray-400">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Let's Talk</h3>
+            <p className="text-gray-600 dark:text-gray-400">
               I'm always interested in hearing about new opportunities, 
               interesting projects, or just having a chat about tech.
             </p>
@@ -50,8 +50,8 @@ const Contact = () => {
                     <info.icon size={20} />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">{info.label}</div>
-                    <div className="text-white">{info.value}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">{info.label}</div>
+                    <div className="text-gray-900 dark:text-white">{info.value}</div>
                   </div>
                 </div>
               ))}
@@ -61,39 +61,39 @@ const Contact = () => {
           <div className="glass-effect p-6 rounded-2xl">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Name</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors dark:bg-gray-800/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-500"
                   placeholder="Your name"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Email</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">Email</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors dark:bg-gray-800/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-500"
                   placeholder="your@email.com"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Message</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors resize-none dark:bg-gray-800/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-500"
                   placeholder="Your message..."
                   required
                 />

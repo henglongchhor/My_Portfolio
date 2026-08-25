@@ -7,7 +7,7 @@ import { experiences } from '../data/experience'
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-padding bg-gray-800/30">
+    <section id="experience" className="section-padding bg-slate-100/80 dark:bg-gray-800/30">
       <Container>
         <SectionTitle
           badge="Experience"

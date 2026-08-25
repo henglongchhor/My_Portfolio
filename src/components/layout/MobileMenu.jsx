@@ -24,14 +24,14 @@ const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 z-40 h-full w-80 max-w-[80%] bg-gray-900/95 backdrop-blur-xl shadow-2xl lg:hidden"
+            className="fixed right-0 top-0 z-40 h-full w-80 max-w-[80%] bg-white/95 text-gray-900 backdrop-blur-xl shadow-2xl lg:hidden dark:bg-gray-900/95 dark:text-white"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-800">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
               <span className="text-xl font-bold gradient-text">Portfolio</span>
               <button
                 onClick={onClose}
-                className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                className="p-2 text-gray-500 hover:text-gray-950 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
                 aria-label="Close menu"
               >
                 <FaTimes size={22} />
@@ -47,7 +47,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 text-base font-medium"
+                  className="flex items-center px-4 py-3 text-gray-600 hover:text-gray-950 hover:bg-gray-100 rounded-lg transition-all duration-200 text-base font-medium dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800/50"
                   onClick={(e) => {
                     e.preventDefault()
                     onNavClick(link.id)
@@ -60,18 +60,18 @@ const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-800 bg-gray-900/50">
+            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 bg-gray-50/70 dark:border-gray-800 dark:bg-gray-900/50">
               <Button variant="primary" size="lg" fullWidth>
                 Hire Me
               </Button>
               <div className="flex justify-center gap-4 mt-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
                   GitHub
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
                   LinkedIn
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
                   Twitter
                 </a>
               </div>

@@ -7,7 +7,7 @@ import SocialLinks from '../components/common/SocialLinks'
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-b from-gray-900 via-gray-900 to-primary-900/20" />
+      <div className="absolute inset-0 bg-linear-to-b from-slate-50 via-white to-primary-100/60 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20" />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl animate-float" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-600/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
@@ -39,7 +39,7 @@ const Hero = () => {
               Hi, I'm{' '}
               <span className="gradient-text">John Doe</span>
               <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl text-gray-400">
+              <span className="text-2xl md:text-3xl lg:text-4xl text-gray-600 dark:text-gray-400">
                 Full Stack Developer
               </span>
             </motion.h1>
@@ -48,7 +48,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-8"
+              className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 dark:text-gray-400"
             >
               Passionate about creating beautiful, functional, and user-centric
               digital experiences. Specializing in React, Node.js, and modern web technologies.
@@ -74,13 +74,13 @@ const Hero = () => {
             className="flex-1 flex justify-center"
           >
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/20">
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/20 bg-linear-to-br from-primary-100 to-primary-300 dark:from-primary-950 dark:to-gray-800">
                 <img
                   src="/images/profile.webp"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    e.target.src = ''
+                    e.currentTarget.style.display = 'none'
                   }}
                 />
               </div>

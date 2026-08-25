@@ -22,7 +22,7 @@ const SectionTitle = ({
         <span className="gradient-text">{title}</span>
       </h2>
       {subtitle && (
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg dark:text-gray-400">
           {subtitle}
         </p>
       )}

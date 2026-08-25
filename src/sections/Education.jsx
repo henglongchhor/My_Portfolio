@@ -7,7 +7,7 @@ import { education } from '../data/education'
 
 const Education = () => {
   return (
-    <section id="education" className="section-padding bg-gray-800/30">
+    <section id="education" className="section-padding bg-slate-100/80 dark:bg-gray-800/30">
       <Container>
         <SectionTitle
           badge="Education"
@@ -34,11 +34,11 @@ const Education = () => {
               </div>
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
                 <span className="text-primary-400 text-sm font-medium">{edu.period}</span>
               </div>
-              <h4 className="text-gray-400 mb-2">{edu.institution}</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <h4 className="text-gray-600 mb-2 dark:text-gray-400">{edu.institution}</h4>
+              <p className="text-gray-600 text-sm leading-relaxed dark:text-gray-400">
                 {edu.description}
               </p>
             </motion.div>

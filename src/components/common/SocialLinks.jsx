@@ -15,7 +15,7 @@ const SocialLinks = ({ className = '', iconSize = 24 }) => {
         <a
           key={social.label}
           href={social.href}
-          className="p-3 text-gray-400 hover:text-white hover:bg-gray-800 rounded-full transition-all duration-300"
+          className="p-3 text-gray-500 hover:text-gray-950 hover:bg-gray-200 rounded-full transition-all duration-300 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
           aria-label={social.label}
         >
           <social.icon size={iconSize} />

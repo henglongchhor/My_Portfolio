@@ -13,7 +13,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-gray-800/30">
+    <section id="about" className="section-padding bg-slate-100/80 dark:bg-gray-800/30">
       <Container>
         <SectionTitle
           badge="About Me"
@@ -31,11 +31,11 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-4">
               I'm a <span className="gradient-text">Full Stack Developer</span>
             </h3>
-            <p className="text-gray-400 mb-4 leading-relaxed">
+            <p className="text-gray-600 mb-4 leading-relaxed dark:text-gray-400">
               With over 5 years of experience in web development, I specialize in building
               modern, responsive, and performant web applications using cutting-edge technologies.
             </p>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-6 leading-relaxed dark:text-gray-400">
               I'm passionate about creating seamless user experiences and writing clean,
               maintainable code. I believe in continuous learning and staying updated with
               the latest industry trends.
@@ -65,7 +65,7 @@ const About = () => {
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
