@@ -27,7 +27,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-slate-100/80 dark:bg-gray-800/30">
+    <section id="contact" className="section-padding">
       <Container>
         <SectionTitle
           badge="Contact"

@@ -7,7 +7,7 @@ import { education } from '../data/education'
 
 const Education = () => {
   return (
-    <section id="education" className="section-padding bg-slate-100/80 dark:bg-gray-800/30">
+    <section id="education" className="section-padding">
       <Container>
         <SectionTitle
           badge="Education"
