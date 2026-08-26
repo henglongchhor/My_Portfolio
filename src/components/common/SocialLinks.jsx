@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaGithub, FaTelegram, FaFacebook, FaInstagram } from 'react-icons/fa'
 
 const SocialLinks = ({ className = '', iconSize = 24 }) => {
@@ -15,7 +14,9 @@ const SocialLinks = ({ className = '', iconSize = 24 }) => {
         <a
           key={social.label}
           href={social.href}
-          className="p-3 text-blue-600 hover:text-blue-500 hover:bg-gray-200 rounded-full transition-all duration-300 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-3 text-blue-700 hover:text-blue-500 hover:bg-gray-200 rounded-full transition-all duration-300 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
           aria-label={social.label}
         >
           <social.icon size={iconSize} />
