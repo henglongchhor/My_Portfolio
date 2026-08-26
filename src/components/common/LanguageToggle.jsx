@@ -8,7 +8,7 @@ const LanguageToggle = ({ className = '' }) => {
     <button
       type="button"
       onClick={toggleLanguage}
-      className={`inline-flex items-center justify-center gap-2 rounded-lg border border-primary-500/30 bg-primary-500/10 px-3 py-2 text-sm font-semibold text-primary-600 transition-colors hover:bg-primary-500/20 dark:text-primary-300 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-lg border border-primary-500/30 bg-primary-500/10 px-3 py-2 text-base font-semibold text-primary-600 transition-colors hover:bg-primary-500/20 dark:text-primary-300 ${className}`}
       aria-label={t('controls.switchLanguage')}
       title={t('controls.switchLanguage')}
     >

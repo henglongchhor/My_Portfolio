@@ -61,7 +61,7 @@ const About = () => {
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+                <div className="text-base text-gray-600 dark:text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

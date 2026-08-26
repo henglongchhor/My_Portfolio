@@ -78,7 +78,7 @@ const Navbar = () => {
                 <a
                   key={link.id}
                   href={`#${link.id}`}
-                  className="px-3 py-2 text-sm text-gray-600 hover:text-gray-950 transition-colors rounded-lg hover:bg-gray-200/70 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800/50"
+                  className="px-3 py-2 text-base text-gray-600 hover:text-gray-950 transition-colors rounded-lg hover:bg-gray-200/70 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800/50"
                   onClick={(e) => {
                     e.preventDefault()
                     handleNavClick(link.id)

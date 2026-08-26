@@ -20,7 +20,7 @@ const Footer = () => {
 
           <SocialLinks />
 
-          <div className="text-center md:text-right text-gray-600 text-sm dark:text-gray-400">
+          <div className="text-center md:text-right text-gray-600 text-base dark:text-gray-400">
             <p>© {currentYear} {t('footer.rights')}</p>
             <p className="mt-1 flex items-center justify-center md:justify-end gap-1">
               {t('footer.madeWith')} <FaHeart className="text-red-500" /> {t('footer.using')}

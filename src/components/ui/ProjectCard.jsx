@@ -27,10 +27,10 @@ const ProjectCard = ({ project }) => {
       
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-gray-600 text-sm mb-4 dark:text-gray-400">{localize(project, 'description')}</p>
+        <p className="text-gray-600 text-base mb-4 dark:text-gray-400">{localize(project, 'description')}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
-            <span key={tech} className="px-3 py-1 text-xs font-medium text-primary-400 bg-primary-500/10 rounded-full border border-primary-500/20">
+            <span key={tech} className="px-3 py-1 text-base font-medium text-primary-400 bg-primary-500/10 rounded-full border border-primary-500/20">
               {tech}
             </span>
           ))}

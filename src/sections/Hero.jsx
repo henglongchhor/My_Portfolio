@@ -22,7 +22,7 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 mb-6 text-sm font-medium text-primary-400 bg-primary-500/10 border border-primary-500/20 rounded-full"
+              className="inline-block px-4 py-2 mb-6 text-base font-medium text-primary-400 bg-primary-500/10 border border-primary-500/20 rounded-full"
             >
               {t('hero.welcome')}
             </motion.div>
@@ -89,7 +89,7 @@ const Hero = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 glass-effect px-6 py-3 rounded-full animate-float">
-                <span className="text-sm font-semibold text-primary-400">{t('hero.available')}</span>
+                <span className="text-base font-semibold text-primary-400">{t('hero.available')}</span>
               </div>
             </div>
           </motion.div>

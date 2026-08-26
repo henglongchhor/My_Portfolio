@@ -33,7 +33,7 @@ const ExperienceCard = ({ experience, isLast = false }) => {
             onError={() => setLogoFailed(true)}
           />
         ) : (
-          <span className="px-1 text-center text-[10px] font-black tracking-tight text-white">
+          <span className="px-1 text-center text-base font-black tracking-tighter text-white">
             {experience.logoLabel}
           </span>
         )}
@@ -41,10 +41,10 @@ const ExperienceCard = ({ experience, isLast = false }) => {
 
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{localize(experience, 'company')}</h3>
-        <span className="text-primary-400 text-sm font-medium">{experience.period}</span>
+        <span className="text-primary-400 text-base font-medium">{experience.period}</span>
       </div>
       <h4 className="text-gray-600 mb-3 dark:text-gray-400">{localize(experience, 'position')}</h4>
-      <p className="text-gray-600 text-sm leading-relaxed dark:text-gray-400">
+      <p className="text-gray-600 text-base leading-relaxed dark:text-gray-400">
         {localize(experience, 'description')}
       </p>
     </div>

@@ -14,7 +14,7 @@ const SectionTitle = ({
       ${className}
     `}>
       {badge && (
-        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-primary-400 bg-primary-500/10 border border-primary-500/20 rounded-full">
+        <span className="inline-block px-4 py-1.5 mb-4 text-base font-medium text-primary-400 bg-primary-500/10 border border-primary-500/20 rounded-full">
           {badge}
         </span>
       )}

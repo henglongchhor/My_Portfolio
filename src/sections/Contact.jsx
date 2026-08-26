@@ -93,7 +93,7 @@ const Contact = () => {
           </div>
           <div className="min-w-0">
             <p className="font-semibold">{t('contact.validatedTitle')}</p>
-            <p className="mt-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+            <p className="mt-1 text-base leading-relaxed text-gray-600 dark:text-gray-400">
               {t('contact.validatedMessage')}
             </p>
           </div>
@@ -113,7 +113,7 @@ const Contact = () => {
             <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-violet-500/15 blur-3xl" />
 
             <div className="relative">
-              <span className="mb-5 inline-flex rounded-full border border-primary-500/20 bg-primary-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary-600 dark:border-white/10 dark:bg-white/5 dark:text-primary-300">
+              <span className="mb-5 inline-flex rounded-full border border-primary-500/20 bg-primary-500/10 px-3 py-1 text-base font-semibold uppercase tracking-[0.18em] text-primary-600 dark:border-white/10 dark:bg-white/5 dark:text-primary-300">
                 {t('contact.badge')}
               </span>
               <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('contact.heading')}</h3>
@@ -129,7 +129,7 @@ const Contact = () => {
                       <info.icon size={18} />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-xs font-medium uppercase tracking-wider text-gray-500">{info.label}</p>
+                      <p className="text-base font-medium uppercase tracking-wider text-gray-500">{info.label}</p>
                       <p className="mt-1 truncate font-medium text-gray-900 dark:text-gray-100">{info.value}</p>
                     </div>
                   </div>
@@ -144,7 +144,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold tracking-tight text-gray-950 dark:text-white">
                   {t('contact.title')}
                 </h3>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{t('contact.requiredNote')}</p>
+                <p className="mt-1 text-base text-gray-500 dark:text-gray-400">{t('contact.requiredNote')}</p>
               </div>
               <div className="hidden h-12 w-12 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 sm:flex">
                 <FaPaperPlane size={19} />
@@ -153,7 +153,7 @@ const Contact = () => {
 
             <form onSubmit={event => handleSubmit(handleValidSubmit)(event)} className="space-y-5" noValidate>
               <div>
-                <label htmlFor="contact-name" className="mb-2 block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                <label htmlFor="contact-name" className="mb-2 block text-base font-semibold text-gray-700 dark:text-gray-300">
                   {t('contact.name')}
                 </label>
                 <input
@@ -167,14 +167,14 @@ const Contact = () => {
                   {...register('name')}
                 />
                 {errors.name && (
-                  <p id="contact-name-error" role="alert" className="mt-2 flex items-center gap-2 text-sm text-red-500">
+                  <p id="contact-name-error" role="alert" className="mt-2 flex items-center gap-2 text-base text-red-500">
                     <FaExclamationCircle size={13} /> {t(errors.name.message)}
                   </p>
                 )}
               </div>
 
               <div>
-                <label htmlFor="contact-email" className="mb-2 block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                <label htmlFor="contact-email" className="mb-2 block text-base font-semibold text-gray-700 dark:text-gray-300">
                   {t('contact.email')}
                 </label>
                 <input
@@ -188,7 +188,7 @@ const Contact = () => {
                   {...register('email')}
                 />
                 {errors.email && (
-                  <p id="contact-email-error" role="alert" className="mt-2 flex items-center gap-2 text-sm text-red-500">
+                  <p id="contact-email-error" role="alert" className="mt-2 flex items-center gap-2 text-base text-red-500">
                     <FaExclamationCircle size={13} /> {t(errors.email.message)}
                   </p>
                 )}
@@ -196,10 +196,10 @@ const Contact = () => {
 
               <div>
                 <div className="mb-2 flex items-center justify-between gap-3">
-                  <label htmlFor="contact-message" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <label htmlFor="contact-message" className="text-base font-semibold text-gray-700 dark:text-gray-300">
                     {t('contact.message')}
                   </label>
-                  <span className={`text-xs ${messageLength > 1000 ? 'text-red-500' : 'text-gray-400'}`}>
+                  <span className={`text-base ${messageLength > 1000 ? 'text-red-500' : 'text-gray-400'}`}>
                     {messageLength}/1000
                   </span>
                 </div>
@@ -213,7 +213,7 @@ const Contact = () => {
                   {...register('message')}
                 />
                 {errors.message && (
-                  <p id="contact-message-error" role="alert" className="mt-2 flex items-center gap-2 text-sm text-red-500">
+                  <p id="contact-message-error" role="alert" className="mt-2 flex items-center gap-2 text-base text-red-500">
                     <FaExclamationCircle size={13} /> {t(errors.message.message)}
                   </p>
                 )}

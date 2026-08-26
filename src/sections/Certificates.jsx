@@ -32,11 +32,11 @@ const Certificates = () => {
                 <FaCertificate />
               </div>
               <h4 className="text-lg font-semibold mb-2">{localize(cert, 'name')}</h4>
-              <p className="text-gray-600 text-sm dark:text-gray-400">{cert.issuer}</p>
-              <p className="text-primary-400 text-sm mt-2">{cert.date}</p>
+              <p className="text-gray-600 text-base dark:text-gray-400">{cert.issuer}</p>
+              <p className="text-primary-400 text-base mt-2">{cert.date}</p>
               <a 
                 href={cert.link} 
-                className="inline-block mt-4 text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors"
+                className="inline-block mt-4 text-primary-400 hover:text-primary-300 text-base font-medium transition-colors"
               >
                 {t('certificates.view')}
               </a>
