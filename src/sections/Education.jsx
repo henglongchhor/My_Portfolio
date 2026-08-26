@@ -86,7 +86,7 @@ const Education = () => {
                   <h3 className="text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl dark:text-white">
                     {localize(edu, 'degree')}
                   </h3>
-                  <p className="mt-2 text-base font-semibold text-gray-700 dark:text-pink-300">
+                  <p className="mt-2 text-base font-semibold text-blue-800 dark:text-pink-300">
                     {localize(edu, 'institution')}
                   </p>
                   <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400">
