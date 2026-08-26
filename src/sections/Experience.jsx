@@ -4,15 +4,18 @@ import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
 import ExperienceCard from '../components/ui/ExperienceCard'
 import { experiences } from '../data/experience'
+import { useLanguage } from '../context/useLanguage'
 
 const Experience = () => {
+  const { t } = useLanguage()
+
   return (
     <section id="experience" className="section-padding">
       <Container>
         <SectionTitle
-          badge="Experience"
-          title="My Experience"
-          subtitle="My professional journey"
+          badge={t('experience.badge')}
+          title={t('experience.title')}
+          subtitle={t('experience.subtitle')}
         />
 
         <div className="max-w-4xl mx-auto mt-12 space-y-6">

@@ -3,8 +3,10 @@ import { FaEnvelope, FaPhone, FaMapMarker, FaPaperPlane } from 'react-icons/fa'
 import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
 import Button from '../components/common/Button'
+import { useLanguage } from '../context/useLanguage'
 
 const Contact = () => {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,26 +23,25 @@ const Contact = () => {
   }
 
   const contactInfo = [
-    { icon: FaEnvelope, label: 'Email', value: 'john@example.com' },
-    { icon: FaPhone, label: 'Phone', value: '+1 234 567 890' },
-    { icon: FaMapMarker, label: 'Location', value: 'San Francisco, CA' },
+    { icon: FaEnvelope, label: t('contact.email'), value: 'john@example.com' },
+    { icon: FaPhone, label: t('contact.phone'), value: '+1 234 567 890' },
+    { icon: FaMapMarker, label: t('contact.location'), value: 'San Francisco, CA' },
   ]
 
   return (
     <section id="contact" className="section-padding">
       <Container>
         <SectionTitle
-          badge="Contact"
-          title="Get In Touch"
-          subtitle="Have a question or want to work together? Feel free to reach out!"
+          badge={t('contact.badge')}
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
         />
 
         <div className="grid md:grid-cols-2 gap-8 mt-12">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Let's Talk</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{t('contact.heading')}</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              I'm always interested in hearing about new opportunities, 
-              interesting projects, or just having a chat about tech.
+              {t('contact.description')}
             </p>
 
             <div className="space-y-4">
@@ -61,47 +62,47 @@ const Contact = () => {
           <div className="glass-effect p-6 rounded-2xl">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">Name</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">{t('contact.name')}</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors dark:bg-gray-800/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-500"
-                  placeholder="Your name"
+                  placeholder={t('contact.namePlaceholder')}
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">Email</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">{t('contact.email')}</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors dark:bg-gray-800/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-500"
-                  placeholder="your@email.com"
+                  placeholder={t('contact.emailPlaceholder')}
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">Message</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-300">{t('contact.message')}</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
                   className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors resize-none dark:bg-gray-800/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-500"
-                  placeholder="Your message..."
+                  placeholder={t('contact.messagePlaceholder')}
                   required
                 />
               </div>
 
               <Button type="submit" variant="primary" size="lg" fullWidth>
                 <FaPaperPlane className="mr-2" />
-                Send Message
+                {t('contact.send')}
               </Button>
             </form>
           </div>

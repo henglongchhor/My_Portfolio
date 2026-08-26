@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
-import Button from '../common/Button'
 import MobileMenu from './MobileMenu'
+import LanguageToggle from '../common/LanguageToggle'
+import { useLanguage } from '../../context/useLanguage'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t } = useLanguage()
   const [darkMode, setDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme) return savedTheme === 'dark'
@@ -13,14 +15,14 @@ const Navbar = () => {
   })
 
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'education', label: 'Education' },
-    { id: 'certificates', label: 'Certificates' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: t('nav.home') },
+    { id: 'about', label: t('nav.about') },
+    { id: 'skills', label: t('nav.skills') },
+    { id: 'experience', label: t('nav.experience') },
+    { id: 'projects', label: t('nav.projects') },
+    { id: 'education', label: t('nav.education') },
+    { id: 'certificates', label: t('nav.certificates') },
+    { id: 'contact', label: t('nav.contact') },
   ]
 
   useEffect(() => {
@@ -67,7 +69,7 @@ const Navbar = () => {
                 handleNavClick('home')
               }}
             >
-              Portfolio
+              {t('brand')}
             </a>
 
             {/* Desktop Navigation */}
@@ -93,22 +95,19 @@ const Navbar = () => {
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 className="p-2 text-gray-600 hover:text-gray-950 hover:bg-gray-200/70 rounded-lg transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800/50"
-                aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
-                title={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
+                aria-label={t('controls.switchTheme', { mode: t(`controls.${darkMode ? 'light' : 'dark'}`) })}
+                title={t('controls.switchTheme', { mode: t(`controls.${darkMode ? 'light' : 'dark'}`) })}
               >
                 {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
               </button>
               
-              {/* Desktop Hire Me Button */}
-              <Button size="sm" className="hidden lg:inline-flex">
-                Hire Me
-              </Button>
+              <LanguageToggle className="hidden lg:inline-flex" />
 
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="lg:hidden p-2 text-gray-600 hover:text-gray-950 hover:bg-gray-200/70 rounded-lg transition-colors relative dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800/50"
-                aria-label="Toggle menu"
+                aria-label={t('controls.toggleMenu')}
               >
                 {isMobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
               </button>

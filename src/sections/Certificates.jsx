@@ -4,15 +4,18 @@ import { FaCertificate } from 'react-icons/fa'
 import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
 import { certificates } from '../data/certificates'
+import { useLanguage } from '../context/useLanguage'
 
 const Certificates = () => {
+  const { localize, t } = useLanguage()
+
   return (
     <section id="certificates" className="section-padding">
       <Container>
         <SectionTitle
-          badge="Certificates"
-          title="My Certificates"
-          subtitle="Professional certifications and achievements"
+          badge={t('certificates.badge')}
+          title={t('certificates.title')}
+          subtitle={t('certificates.subtitle')}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -28,14 +31,14 @@ const Certificates = () => {
               <div className="text-4xl text-primary-400 mb-4">
                 <FaCertificate />
               </div>
-              <h4 className="text-lg font-semibold mb-2">{cert.name}</h4>
+              <h4 className="text-lg font-semibold mb-2">{localize(cert, 'name')}</h4>
               <p className="text-gray-600 text-sm dark:text-gray-400">{cert.issuer}</p>
               <p className="text-primary-400 text-sm mt-2">{cert.date}</p>
               <a 
                 href={cert.link} 
                 className="inline-block mt-4 text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors"
               >
-                View Certificate →
+                {t('certificates.view')}
               </a>
             </motion.div>
           ))}

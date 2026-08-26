@@ -20,6 +20,7 @@
     "ogl": "^1.0.11",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-flagkit": "^2.0.4",
     "react-icons": "^5.7.0",
     "shadcn": "^4.19.0",
     "tailwind-merge": "^3.6.0",

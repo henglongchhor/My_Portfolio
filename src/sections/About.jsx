@@ -3,21 +3,19 @@ import { motion } from 'framer-motion'
 import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
 import Button from '../components/common/Button'
+import { useLanguage } from '../context/useLanguage'
 
 const About = () => {
-  const stats = [
-    { label: 'Years Experience', value: '1+' },
-    { label: 'Projects Completed', value: '10+' },
-    { label: 'Programming Languages', value: '5+' },
-  ]
+  const { t } = useLanguage()
+  const stats = t('about.stats')
 
   return (
     <section id="about" className="section-padding">
       <Container>
         <SectionTitle
-          badge="About Me"
-          title="Know Me Better"
-          subtitle="A passionate developer dedicated to creating impactful digital solutions"
+          badge={t('about.badge')}
+          title={t('about.title')}
+          subtitle={t('about.subtitle')}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
@@ -28,20 +26,17 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-4">
-              I'm a <span className="gradient-text">Full Stack Developer</span>
+              {t('about.headingPrefix')} <span className="gradient-text">{t('about.role')}</span>
             </h3>
             <p className="text-gray-600 mb-4 leading-relaxed dark:text-gray-400">
-              With over 5 years of experience in web development, I specialize in building
-              modern, responsive, and performant web applications using cutting-edge technologies.
+              {t('about.paragraphOne')}
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed dark:text-gray-400">
-              I'm passionate about creating seamless user experiences and writing clean,
-              maintainable code. I believe in continuous learning and staying updated with
-              the latest industry trends.
+              {t('about.paragraphTwo')}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary"><a href="/CV/CV_Heng_Longchhor.docx" download>Download CV</a></Button>
-              <Button variant="outline">Contact Me</Button>
+              <Button variant="primary"><a href="/CV/CV_Heng_Longchhor.docx" download>{t('about.downloadCv')}</a></Button>
+              <Button variant="outline">{t('about.contactMe')}</Button>
             </div>
           </motion.div>
 

@@ -4,15 +4,18 @@ import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
 import SkillCard from '../components/ui/SkillCard'
 import { skills } from '../data/skills'
+import { useLanguage } from '../context/useLanguage'
 
 const Skills = () => {
+  const { t } = useLanguage()
+
   return (
     <section id="skills" className="section-padding">
       <Container>
         <SectionTitle
-          badge="My Skills"
-          title="Technical Expertise"
-          subtitle="Technologies and tools I work with"
+          badge={t('skills.badge')}
+          title={t('skills.title')}
+          subtitle={t('skills.subtitle')}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">

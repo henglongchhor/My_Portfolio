@@ -1,9 +1,12 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes } from 'react-icons/fa'
-import Button from '../common/Button'
+import LanguageToggle from '../common/LanguageToggle'
+import { useLanguage } from '../../context/useLanguage'
 
 const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
+  const { t } = useLanguage()
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -28,11 +31,11 @@ const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
-              <span className="text-xl font-bold gradient-text">Portfolio</span>
+              <span className="text-xl font-bold gradient-text">{t('brand')}</span>
               <button
                 onClick={onClose}
                 className="p-2 text-gray-500 hover:text-gray-950 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800"
-                aria-label="Close menu"
+                aria-label={t('controls.closeMenu')}
               >
                 <FaTimes size={22} />
               </button>
@@ -61,9 +64,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
 
             {/* Bottom Actions */}
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 bg-gray-50/70 dark:border-gray-800 dark:bg-gray-900/50">
-              <Button variant="primary" size="lg" fullWidth>
-                Hire Me
-              </Button>
+              <LanguageToggle className="w-full" />
               <div className="flex justify-center gap-4 mt-4">
                 <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
                   GitHub

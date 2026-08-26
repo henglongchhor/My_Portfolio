@@ -1,12 +1,15 @@
 import React from 'react'
 import MainLayout from './layouts/Mainlayout'
 import Home from './pages/Home'
+import { LanguageProvider } from './context/LanguageContext'
 
 function App() {
   return (
-    <MainLayout>
-      <Home />
-    </MainLayout>
+    <LanguageProvider>
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    </LanguageProvider>
   )
 }
 

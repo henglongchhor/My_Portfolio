@@ -1,26 +1,38 @@
 export const education = [
   {
     degree: 'Primary School',
+    degreeKm: 'បឋមសិក្សា',
     institution: 'Kampong Chheulteal Primary School',
+    institutionKm: 'សាលាបឋមសិក្សាកំពង់ឈើទាល',
     period: '2011-2017',
     description: 'Completed primary education with a focus on foundational subjects and extracurricular activities.',
+    descriptionKm: 'បានបញ្ចប់ការសិក្សាបឋមសិក្សា ដោយផ្តោតលើមុខវិជ្ជាមូលដ្ឋាន និងសកម្មភាពក្រៅកម្មវិធីសិក្សា។',
   },
   {
     degree: 'Secondary School',
+    degreeKm: 'អនុវិទ្យាល័យ',
     institution: 'Prasat Sambor Secondary School',
+    institutionKm: 'អនុវិទ្យាល័យប្រាសាទសំបូរ',
     period: '2017-2020',
     description: 'Completed secondary education with a focus on mathematics, science, and technology.',
+    descriptionKm: 'បានបញ្ចប់ការសិក្សាអនុវិទ្យាល័យ ដោយផ្តោតលើគណិតវិទ្យា វិទ្យាសាស្ត្រ និងបច្ចេកវិទ្យា។',
   },
   {
     degree: 'High School',
+    degreeKm: 'វិទ្យាល័យ',
     institution: 'Kampong Chheuteal High School',
+    institutionKm: 'វិទ្យាល័យកំពង់ឈើទាល',
     period: '2020-2023',
     description: 'Completed high school education with a focus on advanced subjects and preparation for higher education.',
+    descriptionKm: 'បានបញ្ចប់ការសិក្សាវិទ្យាល័យ ដោយផ្តោតលើមុខវិជ្ជាកម្រិតខ្ពស់ និងការត្រៀមខ្លួនសម្រាប់ឧត្តមសិក្សា។',
   },
   {
     degree: 'Bachelor of Science in Computer Science',
+    degreeKm: 'បរិញ្ញាបត្រវិទ្យាសាស្ត្រកុំព្យូទ័រ',
     institution: 'Royal University of Phnom Penh',
+    institutionKm: 'សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ',
     period: '2024-Present',
     description: 'Pursuing a Bachelor of Science in Computer Science with a focus on software development, algorithms, and data structures.',
+    descriptionKm: 'កំពុងសិក្សាថ្នាក់បរិញ្ញាបត្រវិទ្យាសាស្ត្រកុំព្យូទ័រ ដោយផ្តោតលើការអភិវឌ្ឍកម្មវិធី ក្បួនដោះស្រាយ និងរចនាសម្ព័ន្ធទិន្នន័យ។',
   },
 ]

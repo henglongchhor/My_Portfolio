@@ -4,15 +4,18 @@ import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
 import { education } from '../data/education'
+import { useLanguage } from '../context/useLanguage'
 
 const Education = () => {
+  const { localize, t } = useLanguage()
+
   return (
     <section id="education" className="section-padding">
       <Container>
         <SectionTitle
-          badge="Education"
-          title="My Education"
-          subtitle="My academic background"
+          badge={t('education.badge')}
+          title={t('education.title')}
+          subtitle={t('education.subtitle')}
         />
 
         <ScrollStack
@@ -48,16 +51,16 @@ const Education = () => {
 
                 <div className="mt-auto pt-8">
                   <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary-500">
-                    Education {String(index + 1).padStart(2, '0')}
+                    {t('education.cardLabel')} {String(index + 1).padStart(2, '0')}
                   </p>
                   <h3 className="text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl dark:text-white">
-                    {edu.degree}
+                    {localize(edu, 'degree')}
                   </h3>
                   <p className="mt-2 text-sm font-semibold text-gray-700 sm:text-base dark:text-gray-300">
-                    {edu.institution}
+                    {localize(edu, 'institution')}
                   </p>
                   <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base dark:text-gray-400">
-                    {edu.description}
+                    {localize(edu, 'description')}
                   </p>
                 </div>
               </div>
