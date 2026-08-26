@@ -27,7 +27,7 @@ export const experiences = [
   },
   {
     company: 'At ANT ( Short Course ) Scholarship 100% from MPCT and CBRD',
-    logo: '/School/ANT.png',
+    logo: '/public/School/ANT.png',
     logoAlt: 'ANT logo',
     logoLabel: 'ANT',
     logoTone: 'emerald',
