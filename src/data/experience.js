@@ -1,6 +1,10 @@
 export const experiences = [
   {
     company: 'At Royal University of Phnom Penh ( Bachelor Degree )',
+    logo: '/School/RUPP.png',
+    logoAlt: 'RUPP logo',
+    logoLabel: 'RUPP',
+    logoTone: 'indigo',
     companyKm: 'សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (ថ្នាក់បរិញ្ញាបត្រ)',
     position: 'I have learned a lot of subjects like Programming, Database, Networking, and Web Development....',
     positionKm: 'ខ្ញុំបានសិក្សាមុខវិជ្ជាជាច្រើនដូចជា ការសរសេរកម្មវិធី មូលដ្ឋានទិន្នន័យ បណ្តាញ និងការអភិវឌ្ឍវេប។',
@@ -10,6 +14,10 @@ export const experiences = [
   },
   {
     company: 'At ETEC ( Short Course ) Scholarship 100% from School',
+    logo: '/School/ETEC.png',
+    logoAlt: 'ETEC logo',
+    logoLabel: 'ETEC',
+    logoTone: 'blue',
     companyKm: 'ETEC (វគ្គសិក្សាខ្លី) អាហារូបករណ៍ ១០០% ពីសាលា',
     position: 'I have learned C, C++, Java programming language and Web front-end development with React.js and Vue.js',
     positionKm: 'ខ្ញុំបានសិក្សាភាសា C, C++, Java និងការអភិវឌ្ឍ Front-end ជាមួយ React.js និង Vue.js។',
@@ -19,6 +27,10 @@ export const experiences = [
   },
   {
     company: 'At ANT ( Short Course ) Scholarship 100% from MPCT and CBRD',
+    logo: '/public/School/ANT.png',
+    logoAlt: 'ANT logo',
+    logoLabel: 'ANT',
+    logoTone: 'emerald',
     companyKm: 'ANT (វគ្គសិក្សាខ្លី) អាហារូបករណ៍ ១០០% ពី MPTC និង CBRD',
     position: 'I have learned Web Full Stack Development with Vue.js and also learned about Node.js and Express.js for backend development and MySQL for database management. but I just leard frond-end because I have at ISTAD shcool in the same time',
     positionKm: 'ខ្ញុំបានសិក្សាការអភិវឌ្ឍវេប Full Stack ជាមួយ Vue.js, Node.js, Express.js និង MySQL ហើយបានផ្តោតជាចម្បងលើ Front-end។',
@@ -28,6 +40,10 @@ export const experiences = [
   },
   {
     company: 'At ISTAD ( Short Course ) Scholarship 100% from MPCT and CBRD',
+    logo: '/public/School/ISTAD.png',
+    logoAlt: 'ISTAD logo',
+    logoLabel: 'ISTAD',
+    logoTone: 'orange',
     companyKm: 'ISTAD (វគ្គសិក្សាខ្លី) អាហារូបករណ៍ ១០០% ពី MPTC និង CBRD',
     position: 'I have learned Web Full Stack Development with Next.js and also learned about Java Spring Boot for backend development and PostgreSQL for database management.',
     positionKm: 'ខ្ញុំបានសិក្សាការអភិវឌ្ឍវេប Full Stack ជាមួយ Next.js, Java Spring Boot សម្រាប់ Backend និង PostgreSQL សម្រាប់គ្រប់គ្រងទិន្នន័យ។',
@@ -36,7 +52,11 @@ export const experiences = [
     descriptionKm: 'ទទួលបានបទពិសោធន៍ក្នុងការអភិវឌ្ឍ Full Stack រួមទាំងបច្ចេកវិទ្យា Frontend និង Backend។',
   },
   {
-    company: 'Internship At Spring Center ',
+    company: 'Internship At Spring Education Center ',
+    logo: '/public/School/Spring.png',
+    logoAlt: 'Spring Center logo',
+    logoLabel: 'SC',
+    logoTone: 'rose',
     companyKm: 'កម្មសិក្សានៅ Spring Center',
     position: 'I have internship at Spring Center for 3 months and I have learned about Team Collaboration, Marketing and Management.',
     positionKm: 'ខ្ញុំបានធ្វើកម្មសិក្សានៅ Spring Center រយៈពេល ៣ ខែ និងបានសិក្សាអំពីការសហការជាក្រុម ទីផ្សារ និងការគ្រប់គ្រង។',

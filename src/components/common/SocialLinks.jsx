@@ -4,9 +4,9 @@ import { FaGithub, FaTelegram, FaFacebook, FaInstagram } from 'react-icons/fa'
 const SocialLinks = ({ className = '', iconSize = 24 }) => {
   const socials = [
     { icon: FaGithub, href: 'https://github.com/henglongchhor', label: 'GitHub' },
-    { icon: FaTelegram, href: '#', label: 'Telegram' },
-    { icon: FaInstagram, href: '#', label: 'Instagram' },
-    { icon: FaFacebook, href: '#', label: 'facebook' },
+    { icon: FaTelegram, href: 'https://t.me/henglongchhor', label: 'Telegram' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/henglongchhor/', label: 'Instagram' },
+    { icon: FaFacebook, href: 'https://web.facebook.com/longchhor.heng.1/', label: 'facebook' },
   ]
 
   return (

@@ -1,9 +1,19 @@
-import React from 'react'
-import { FaBriefcase } from 'react-icons/fa'
+import { useState } from 'react'
 import { useLanguage } from '../../context/useLanguage'
+
+const logoToneClasses = {
+  indigo: 'from-indigo-500 to-violet-600 shadow-indigo-500/25',
+  blue: 'from-blue-500 to-cyan-500 shadow-blue-500/25',
+  emerald: 'from-emerald-500 to-teal-500 shadow-emerald-500/25',
+  orange: 'from-orange-500 to-amber-500 shadow-orange-500/25',
+  rose: 'from-rose-500 to-pink-500 shadow-rose-500/25',
+}
 
 const ExperienceCard = ({ experience, isLast = false }) => {
   const { localize } = useLanguage()
+  const [logoFailed, setLogoFailed] = useState(false)
+  const showLogoImage = experience.logo && !logoFailed
+  const logoTone = logoToneClasses[experience.logoTone] ?? logoToneClasses.indigo
 
   return (
     <div className="glass-effect rounded-2xl p-6 relative pl-12">
@@ -11,8 +21,22 @@ const ExperienceCard = ({ experience, isLast = false }) => {
         <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-linear-to-b from-primary-500 to-primary-600 opacity-30" />
       )}
       
-      <div className="absolute left-0 top-6 -translate-x-1/2 w-12 h-12 rounded-full bg-linear-to-r from-primary-500 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/30">
-        <FaBriefcase className="text-white" />
+      <div
+        className={`absolute left-0 top-6 flex h-12 w-12 -translate-x-1/2 items-center justify-center overflow-hidden rounded-full bg-linear-to-br shadow-lg ${logoTone}`}
+        title={experience.logoAlt || experience.logoLabel}
+      >
+        {showLogoImage ? (
+          <img
+            src={experience.logo}
+            alt={experience.logoAlt || `${experience.logoLabel} logo`}
+            className="h-10 w-10 rounded-full bg-white object-contain p-0.5"
+            onError={() => setLogoFailed(true)}
+          />
+        ) : (
+          <span className="px-1 text-center text-[10px] font-black tracking-tight text-white">
+            {experience.logoLabel}
+          </span>
+        )}
       </div>
 
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">

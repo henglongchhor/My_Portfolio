@@ -34,6 +34,20 @@
   55%, 100% { opacity: 0; }
 }
 
+@keyframes confetti-burst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--confetti-x)),
+      calc(-50% + var(--confetti-y))
+    ) rotate(var(--confetti-rotation)) scale(0.65);
+  }
+}
+
 @layer base {
   * { margin: 0; padding: 0; box-sizing: border-box;
     @apply border-border outline-ring/50; }
