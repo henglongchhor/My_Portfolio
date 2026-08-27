@@ -82,6 +82,8 @@ const Hero = () => {
                 <img
                   src="/Hero/image.png"
                   alt={t('hero.profileAlt')}
+                  decoding="async"
+                  fetchPriority="high"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none'

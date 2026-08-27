@@ -85,7 +85,8 @@ const useAnimationLoop = (
   seqHeight,
   isHovered,
   hoverSpeed,
-  isVertical
+  isVertical,
+  isVisible
 ) => {
   const rafRef = useRef(null);
   const lastTimestampRef = useRef(null);
@@ -111,7 +112,7 @@ const useAnimationLoop = (
       track.style.transform = transformValue;
     }
 
-    if (prefersReduced) {
+    if (prefersReduced || !isVisible) {
       track.style.transform = isVertical ? 'translate3d(0, 0, 0)' : 'translate3d(0, 0, 0)';
       return () => {
         lastTimestampRef.current = null;
@@ -154,7 +155,7 @@ const useAnimationLoop = (
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical]);
+  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, isVisible]);
 };
 
 export const LogoLoop = React.memo(({
@@ -182,6 +183,19 @@ export const LogoLoop = React.memo(({
   const [seqHeight, setSeqHeight] = useState(0);
   const [copyCount, setCopyCount] = useState(ANIMATION_CONFIG.MIN_COPIES);
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !window.IntersectionObserver) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { rootMargin: '150px' }
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   const effectiveHoverSpeed = useMemo(() => {
     if (hoverSpeed !== undefined) return hoverSpeed;
@@ -244,7 +258,8 @@ export const LogoLoop = React.memo(({
     seqHeight,
     isHovered,
     effectiveHoverSpeed,
-    isVertical
+    isVertical,
+    isVisible
   );
 
   const cssVariables = useMemo(() =>

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Mesh, Program, Renderer, Triangle } from 'ogl';
 
-const MAX_POINTS = 64;
+const MAX_POINTS = 32;
 
 const VERTEX_SHADER = `
 attribute vec2 position;
@@ -17,7 +17,7 @@ void main() {
 const FRAGMENT_SHADER = `
 precision highp float;
 
-#define MAX_POINTS 64
+#define MAX_POINTS 32
 
 uniform vec2 uResolution;
 uniform vec2 uPoints[MAX_POINTS];
@@ -138,6 +138,7 @@ const GlowCursor = ({
   fadeDuration = 900,
   blendMode = 'screen',
   maxDevicePixelRatio = 1.5,
+  maxFrameRate = 45,
   enabled = true,
   global = false,
   children,
@@ -308,6 +309,11 @@ const GlowCursor = ({
     const render = (now) => {
       if (destroyed) return;
       const config = propsRef.current;
+      const frameDuration = 1000 / clamp(maxFrameRate, 15, 60);
+      if (now - lastFrameTime < frameDuration) {
+        raf = requestAnimationFrame(render);
+        return;
+      }
       const delta = Math.min((now - lastFrameTime) / 16.667, 3);
       lastFrameTime = now;
 
@@ -375,7 +381,7 @@ const GlowCursor = ({
       mesh.geometry.remove();
       program.remove();
     };
-  }, [global, maxDevicePixelRatio]);
+  }, [global, maxDevicePixelRatio, maxFrameRate]);
 
   return (
     <div

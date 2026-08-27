@@ -34,6 +34,7 @@ const ScrollStack = ({
   const cardsRef = useRef([]);
   const lastTransformsRef = useRef(new Map());
   const isUpdatingRef = useRef(false);
+  const isActiveRef = useRef(false);
 
   const calculateProgress = useCallback((scrollTop, start, end) => {
     if (scrollTop < start) return 0;
@@ -83,7 +84,7 @@ const ScrollStack = ({
   }, [useWindowScroll]);
 
   const updateCardTransforms = useCallback(() => {
-    if (!cardsRef.current.length || isUpdatingRef.current) return;
+    if (!isActiveRef.current || !cardsRef.current.length || isUpdatingRef.current) return;
 
     isUpdatingRef.current = true;
 
@@ -257,6 +258,14 @@ const ScrollStack = ({
 
     cardsRef.current = cards;
     const transformsCache = lastTransformsRef.current;
+    const visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        isActiveRef.current = entry.isIntersecting;
+        if (entry.isIntersecting) requestAnimationFrame(updateCardTransforms);
+      },
+      { rootMargin: '300px 0px' }
+    );
+    visibilityObserver.observe(scroller);
 
     cards.forEach((card, i) => {
       if (i < cards.length - 1) {
@@ -282,10 +291,12 @@ const ScrollStack = ({
       if (lenisRef.current) {
         lenisRef.current.destroy();
       }
+      visibilityObserver.disconnect();
       stackCompletedRef.current = false;
       cardsRef.current = [];
       transformsCache.clear();
       isUpdatingRef.current = false;
+      isActiveRef.current = false;
     };
   }, [
     itemDistance,

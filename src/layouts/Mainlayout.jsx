@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
         <div className="absolute inset-0 bg-linear-to-b from-white via-primary-50/70 to-slate-100 dark:from-gray-950 dark:via-primary-950/25 dark:to-gray-950" />
         <Particles
           className="absolute inset-0 opacity-60 dark:opacity-90"
-          particleCount={200}
+          particleCount={90}
           particleSpread={12}
           speed={0.08}
           particleColors={particleColors}
@@ -20,6 +20,8 @@ const MainLayout = ({ children }) => {
           particleBaseSize={200}
           sizeRandomness={1.4}
           cameraDistance={20}
+          pixelRatio={0.75}
+          maxFrameRate={30}
         />
         <div className="absolute inset-0 bg-white/25 dark:bg-gray-950/10" />
       </div>
@@ -29,7 +31,7 @@ const MainLayout = ({ children }) => {
         className="pointer-events-none z-60"
         color="#6366F1"
         secondaryColor="#A78BFA"
-        trailLength={34}
+        trailLength={24}
         trailWidth={4}
         trailTaper={0.85}
         followSpeed={0.2}
@@ -39,6 +41,8 @@ const MainLayout = ({ children }) => {
         opacity={1}
         pulseSpeed={0.8}
         noiseStrength={0.02}
+        maxDevicePixelRatio={0.75}
+        maxFrameRate={40}
         blendMode="normal"
       />
       <Navbar />

@@ -29,6 +29,8 @@ const EducationLogo = ({ educationItem }) => {
         <img
           src={educationItem.logo}
           alt={educationItem.logoAlt || `${educationItem.logoLabel} logo`}
+          loading="lazy"
+          decoding="async"
           className="h-12 w-12 rounded-xl bg-white object-contain p-1"
           onError={() => setLogoFailed(true)}
         />
@@ -62,7 +64,7 @@ const Education = () => {
           stackPosition="18%"
           scaleEndPosition="8%"
           baseScale={0.9}
-          blurAmount={0.35}
+          blurAmount={0}
         >
           {education.map((edu, index) => (
             <ScrollStackItem

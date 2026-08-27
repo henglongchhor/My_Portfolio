@@ -96,6 +96,7 @@ const Particles = ({
   cameraDistance = 20,
   disableRotation = false,
   pixelRatio = 1,
+  maxFrameRate = 30,
   className
 }) => {
   const containerRef = useRef(null);
@@ -187,6 +188,8 @@ const Particles = ({
     const update = t => {
       animationFrameId = requestAnimationFrame(update);
       const delta = t - lastTime;
+      const frameDuration = 1000 / Math.max(15, Math.min(maxFrameRate, 60));
+      if (delta < frameDuration) return;
       lastTime = t;
       elapsed += delta * speed;
 
@@ -233,7 +236,8 @@ const Particles = ({
     sizeRandomness,
     cameraDistance,
     disableRotation,
-    pixelRatio
+    pixelRatio,
+    maxFrameRate
   ]);
 
   return <div ref={containerRef} className={`relative w-full h-full ${className}`} />;

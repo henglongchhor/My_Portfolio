@@ -29,6 +29,8 @@ const ExperienceCard = ({ experience, isLast = false }) => {
           <img
             src={experience.logo}
             alt={experience.logoAlt || `${experience.logoLabel} logo`}
+            loading="lazy"
+            decoding="async"
             className="h-10 w-10 rounded-full bg-white object-contain p-0.5"
             onError={() => setLogoFailed(true)}
           />
