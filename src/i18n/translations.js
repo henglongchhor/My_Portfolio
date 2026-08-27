@@ -101,10 +101,9 @@ export const translations = {
       validatedMessage: 'Everything looks good. The form is ready to connect to your preferred email service.',
     },
     footer: {
-      tagline: 'Building digital experiences with ❤️',
+      tagline: 'Full Stack Developer building responsive and user-focused web applications.',
       rights: 'All rights reserved.',
-      madeWith: 'Made with',
-      using: 'using React & Tailwind',
+      builtWith: 'Built with React and Tailwind CSS.',
     },
   },
   km: {
@@ -209,10 +208,9 @@ export const translations = {
       validatedMessage: 'ព័ត៌មានទាំងអស់ត្រឹមត្រូវ។ Form នេះបានត្រៀមរួចរាល់សម្រាប់ភ្ជាប់ទៅសេវាអ៊ីមែលដែលអ្នកចង់ប្រើ។',
     },
     footer: {
-      tagline: 'បង្កើតបទពិសោធន៍ឌីជីថលដោយក្តីស្រឡាញ់ ❤️',
+      tagline: 'អ្នកអភិវឌ្ឍន៍ Full Stack ដែលបង្កើតកម្មវិធីវេបឆ្លើយតបគ្រប់ឧបករណ៍ និងផ្តោតលើអ្នកប្រើប្រាស់។',
       rights: 'រក្សាសិទ្ធិគ្រប់យ៉ាង។',
-      madeWith: 'បង្កើតដោយ',
-      using: 'ប្រើ React និង Tailwind',
+      builtWith: 'បង្កើតដោយប្រើ React និង Tailwind CSS។',
     },
   },
 }

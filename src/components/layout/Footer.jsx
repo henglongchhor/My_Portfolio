@@ -17,10 +17,8 @@ const Footer = () => {
           </div>
 
           <div className="text-center md:text-right text-gray-600 text-base dark:text-gray-400">
-            <p>© {currentYear} {t('footer.rights')}</p>
-            <p className="mt-1">
-              {t('footer.madeWith')} {t('footer.using')}
-            </p>
+            <p>&copy; {currentYear} {t('hero.name')}. {t('footer.rights')}</p>
+            
           </div>
         </div>
       </div>

@@ -1,8 +1,28 @@
-import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaTimes } from 'react-icons/fa'
+import {
+  FaBriefcase,
+  FaCertificate,
+  FaCode,
+  FaEnvelope,
+  FaGraduationCap,
+  FaHome,
+  FaLaptopCode,
+  FaTimes,
+  FaUser,
+} from 'react-icons/fa'
 import LanguageToggle from '../common/LanguageToggle'
 import { useLanguage } from '../../context/useLanguage'
+
+const navIcons = {
+  home: FaHome,
+  about: FaUser,
+  skills: FaCode,
+  experience: FaBriefcase,
+  projects: FaLaptopCode,
+  education: FaGraduationCap,
+  certificates: FaCertificate,
+  contact: FaEnvelope,
+}
 
 const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
   const { t } = useLanguage()
@@ -43,39 +63,35 @@ const MobileMenu = ({ isOpen, onClose, navLinks, onNavClick }) => {
 
             {/* Navigation Links */}
             <div className="flex flex-col p-4 space-y-1">
-              {navLinks.map((link, index) => (
-                <motion.a
-                  key={link.id}
-                  href={`#${link.id}`}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-center px-4 py-3 text-gray-600 hover:text-gray-950 hover:bg-gray-100 rounded-lg transition-all duration-200 text-base font-medium dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800/50"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    onNavClick(link.id)
-                  }}
-                >
-                  <span className="w-2 h-2 rounded-full bg-primary-500 mr-3 opacity-60"></span>
-                  {link.label}
-                </motion.a>
-              ))}
+              {navLinks.map((link, index) => {
+                const LinkIcon = navIcons[link.id]
+
+                return (
+                  <motion.a
+                    key={link.id}
+                    href={`#${link.id}`}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="group flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-gray-600 transition-all duration-200 hover:bg-gray-100 hover:text-gray-950 dark:text-gray-300 dark:hover:bg-gray-800/50 dark:hover:text-white"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      onNavClick(link.id)
+                    }}
+                  >
+                    <LinkIcon
+                      className="shrink-0 text-lg text-primary-500/80 transition-colors group-hover:text-primary-500"
+                      aria-hidden="true"
+                    />
+                    <span>{link.label}</span>
+                  </motion.a>
+                )
+              })}
             </div>
 
             {/* Bottom Actions */}
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 bg-gray-50/70 dark:border-gray-800 dark:bg-gray-900/50">
               <LanguageToggle className="w-full" />
-              <div className="flex justify-center gap-4 mt-4">
-                <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
-                  GitHub
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
-                  LinkedIn
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-white">
-                  Twitter
-                </a>
-              </div>
             </div>
           </motion.div>
         </>
