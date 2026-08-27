@@ -1,5 +1,3 @@
-import React from 'react'
-import Button from '../common/Button'
 import { useLanguage } from '../../context/useLanguage'
 
 const ProjectCard = ({ project }) => {
@@ -35,11 +33,14 @@ const ProjectCard = ({ project }) => {
             </span>
           ))}
         </div>
-        <Button variant="outline" size="sm" fullWidth>
-          <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-            {t('projects.viewDemo')}
-            </a>
-        </Button>
+        <a
+          href={project.demoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-lg border-2 border-primary-500 px-4 py-2 text-base font-semibold text-primary-500 transition-all duration-300 hover:bg-primary-500 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+        >
+          {t('projects.viewDemo')}
+        </a>
       </div>
     </div>
   )

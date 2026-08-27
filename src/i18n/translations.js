@@ -71,7 +71,7 @@ export const translations = {
       badge: 'Certificates',
       title: 'My Certificates',
       subtitle: 'Professional certifications and achievements',
-      view: 'View Certificate →',
+      view: 'View Certificate',
     },
     contact: {
       badge: 'Contact',
@@ -179,7 +179,7 @@ export const translations = {
       badge: 'វិញ្ញាបនបត្រ',
       title: 'វិញ្ញាបនបត្ររបស់ខ្ញុំ',
       subtitle: 'វិញ្ញាបនបត្រជំនាញ និងសមិទ្ធផល',
-      view: 'មើលវិញ្ញាបនបត្រ →',
+      view: 'មើលវិញ្ញាបនបត្រ',
     },
     contact: {
       badge: 'ទំនាក់ទំនង',

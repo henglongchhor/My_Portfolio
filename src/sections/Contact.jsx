@@ -230,13 +230,10 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-xl bg-linear-to-r from-primary-500 to-violet-500 px-6 py-4 font-semibold text-white shadow-lg shadow-primary-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary-500/25 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500/25 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-primary-500 bg-transparent px-5 py-3 text-base font-semibold text-primary-500 transition-colors hover:bg-primary-500 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  <span className="absolute inset-0 translate-y-full bg-linear-to-r from-primary-600 to-violet-500 transition-transform duration-300 group-hover:translate-y-0" />
-                  <span className="relative">{t('contact.send')}</span>
-                  <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-white/15 transition-transform duration-300 group-hover:translate-x-1">
-                    <FaPaperPlane size={13} />
-                  </span>
+                  <span>{t('contact.send')}</span>
+                  <FaPaperPlane className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                 </button>
               </div>
             </form>
