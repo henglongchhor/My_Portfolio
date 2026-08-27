@@ -9,9 +9,9 @@ const Hero = () => {
   const { language, t } = useLanguage()
 
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
+    <section id="home" className="relative flex min-h-[calc(100svh-4rem)] items-center overflow-hidden py-10 sm:py-14 lg:py-20">
       <Container className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-40">
+        <div className="flex flex-col items-center gap-12 sm:gap-16 lg:flex-row lg:gap-20 xl:gap-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

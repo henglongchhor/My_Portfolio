@@ -18,7 +18,7 @@ const Projects = () => {
           subtitle={t('projects.subtitle')}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}

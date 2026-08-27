@@ -10,7 +10,7 @@ const SectionTitle = ({
   return (
     <div className={`
       ${centered ? 'text-center' : ''}
-      mb-12
+      mb-8 sm:mb-10 lg:mb-12
       ${className}
     `}>
       {badge && (

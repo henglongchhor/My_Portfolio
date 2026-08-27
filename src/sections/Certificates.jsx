@@ -16,7 +16,7 @@ const Certificates = () => {
           subtitle={t('certificates.subtitle')}
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {certificates.map((cert, index) => (
             <motion.div
               key={cert.image}
@@ -26,7 +26,7 @@ const Certificates = () => {
               viewport={{ once: true }}
             >
               <article className="glass-effect group flex min-h-60 h-full overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-105">
-                <div className="flex w-full flex-col p-6">
+                <div className="flex w-full flex-col p-5 sm:p-6">
                   <h3 className="mb-2 text-xl font-bold text-gray-950 dark:text-white">
                     {localize(cert, 'name')}
                   </h3>

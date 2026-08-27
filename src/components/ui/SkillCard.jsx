@@ -2,7 +2,7 @@ const SkillCard = ({ skill }) => {
   const Icon = skill.icon
 
   return (
-    <div className="glass-effect p-6 rounded-2xl hover:scale-105 transition-transform duration-300">
+    <div className="glass-effect rounded-2xl p-5 transition-transform duration-300 hover:scale-105 sm:p-6">
       <div className={`mb-4 text-4xl ${skill.iconClass}`} aria-hidden="true">
         <Icon />
       </div>

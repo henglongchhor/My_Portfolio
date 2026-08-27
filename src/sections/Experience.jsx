@@ -18,7 +18,7 @@ const Experience = () => {
           subtitle={t('experience.subtitle')}
         />
 
-        <div className="max-w-4xl mx-auto mt-12 space-y-6">
+        <div className="mx-auto max-w-4xl space-y-4 sm:space-y-6">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}

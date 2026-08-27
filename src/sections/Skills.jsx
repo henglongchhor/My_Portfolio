@@ -48,7 +48,7 @@ const Skills = () => {
         />
 
         <motion.div
-          className="mt-12 space-y-6"
+          className="space-y-4 sm:space-y-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

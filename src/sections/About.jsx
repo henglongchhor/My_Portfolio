@@ -18,7 +18,7 @@ const About = () => {
           subtitle={t('about.subtitle')}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,7 +54,7 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`glass-effect p-6 rounded-2xl text-center ${
+                className={`glass-effect rounded-2xl p-5 text-center sm:p-6 ${
                   index === stats.length - 1 ? 'col-span-2 justify-self-center' : ''
                 }`}
               >

@@ -107,8 +107,8 @@ const Contact = () => {
           subtitle={t('contact.subtitle')}
         />
 
-        <div className="mx-auto mt-12 grid max-w-6xl overflow-hidden rounded-3xl border border-white/70 bg-white/70 shadow-[0_30px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl lg:grid-cols-[0.85fr_1.15fr] dark:border-white/10 dark:bg-gray-900/70">
-          <aside className="relative overflow-hidden bg-linear-to-br from-primary-50 via-white to-violet-100 p-7 text-gray-950 sm:p-10 lg:p-12 dark:from-gray-950 dark:via-gray-950 dark:to-primary-950 dark:text-white">
+        <div className="mx-auto grid max-w-6xl overflow-hidden rounded-3xl border border-white/70 bg-white/70 shadow-[0_30px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl lg:grid-cols-[0.85fr_1.15fr] dark:border-white/10 dark:bg-gray-900/70">
+          <aside className="relative overflow-hidden bg-linear-to-br from-primary-50 via-white to-violet-100 p-5 text-gray-950 sm:p-8 lg:p-10 dark:from-gray-950 dark:via-gray-950 dark:to-primary-950 dark:text-white">
             <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-primary-500/25 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-violet-500/15 blur-3xl" />
 
@@ -138,7 +138,7 @@ const Contact = () => {
             </div>
           </aside>
 
-          <div className="p-7 sm:p-10 lg:p-12">
+          <div className="p-5 sm:p-8 lg:p-10">
             <div className="mb-8 flex items-center justify-between gap-4">
               <div>
                 <h3 className="text-2xl font-bold tracking-tight text-gray-950 dark:text-white">

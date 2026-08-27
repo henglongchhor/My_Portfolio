@@ -16,7 +16,7 @@ const ExperienceCard = ({ experience, isLast = false }) => {
   const logoTone = logoToneClasses[experience.logoTone] ?? logoToneClasses.indigo
 
   return (
-    <div className="glass-effect rounded-2xl p-6 relative pl-12">
+    <div className="glass-effect relative rounded-2xl p-5 pl-10 sm:p-6 sm:pl-12">
       {!isLast && (
         <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-linear-to-b from-primary-500 to-primary-600 opacity-30" />
       )}
