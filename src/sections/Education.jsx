@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Container from '../components/common/Container'
 import SectionTitle from '../components/common/SectionTitle'
-import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
 import { education } from '../data/education'
 import { useLanguage } from '../context/useLanguage'
 
@@ -55,28 +54,18 @@ const Education = () => {
           subtitle={t('education.subtitle')}
         />
 
-        <ScrollStack
-          className="mx-auto max-w-4xl"
-          useWindowScroll
-          itemDistance={110}
-          itemScale={0.025}
-          itemStackDistance={26}
-          stackPosition="18%"
-          scaleEndPosition="8%"
-          baseScale={0.9}
-          blurAmount={0}
-        >
+        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-2 lg:gap-6">
           {education.map((edu, index) => (
-            <ScrollStackItem
+            <article
               key={edu.degree}
-              itemClassName="overflow-hidden border border-white/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-gray-900/90"
+              className="glass-effect relative flex h-full flex-col overflow-hidden rounded-2xl p-5 shadow-sm transition-colors hover:border-primary-400/60 sm:p-6"
             >
               <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-primary-400 via-primary-500 to-violet-500" />
-              <div className="pointer-events-none absolute -right-10 -top-16 text-[10rem] font-bold leading-none text-primary-500/5 dark:text-primary-400/5">
+              <div className="pointer-events-none absolute -right-4 -top-8 text-8xl font-bold leading-none text-primary-500/5 dark:text-primary-400/5">
                 {String(index + 1).padStart(2, '0')}
               </div>
 
-              <div className="relative flex min-h-56 flex-col">
+              <div className="relative flex h-full flex-col">
                 <div className="flex items-start justify-between gap-4">
                   <EducationLogo educationItem={edu} />
                   <span className="rounded-full border border-primary-500/20 bg-primary-500/10 px-3 py-1.5 text-base font-semibold tracking-wide text-primary-600 dark:text-primary-300">
@@ -84,8 +73,8 @@ const Education = () => {
                   </span>
                 </div>
 
-                <div className="mt-auto pt-8">
-                  <h3 className="text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl dark:text-white">
+                <div className="mt-6">
+                  <h3 className="text-xl font-bold tracking-tight text-gray-950 sm:text-2xl dark:text-white">
                     {localize(edu, 'degree')}
                   </h3>
                   <p className="mt-2 text-base font-semibold text-blue-800 dark:text-pink-300">
@@ -96,9 +85,9 @@ const Education = () => {
                   </p>
                 </div>
               </div>
-            </ScrollStackItem>
+            </article>
           ))}
-        </ScrollStack>
+        </div>
       </Container>
     </section>
   )
