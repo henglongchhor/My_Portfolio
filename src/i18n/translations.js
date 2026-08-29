@@ -41,8 +41,8 @@ export const translations = {
       contactMe: 'Contact Me',
       stats: [
         { label: 'Years Experience', value: '1+' },
-        { label: 'Projects Completed', value: '10+' },
-        { label: 'Programming Languages', value: '5+' },
+        { label: 'Projects Completed', value: '5+' },
+        { label: 'Programming Languages', value: '10+' },
       ],
     },
     skills: {
@@ -148,8 +148,8 @@ export const translations = {
       contactMe: 'ទាក់ទងខ្ញុំ',
       stats: [
         { label: 'ឆ្នាំបទពិសោធន៍', value: '1+' },
-        { label: 'គម្រោងបានបញ្ចប់', value: '10+' },
-        { label: 'ភាសាកម្មវិធី', value: '5+' },
+        { label: 'គម្រោងបានបញ្ចប់', value: '5+' },
+        { label: 'ភាសាកម្មវិធី', value: '10+' },
       ],
     },
     skills: {
