@@ -59,7 +59,7 @@ export const experiences = [
     logoTone: 'rose',
     companyKm: 'កម្មសិក្សានៅ Spring Center',
     position: 'I have internship at Spring Center for 2 months and I have learned about Team Collaboration, Marketing and Management.',
-    positionKm: 'ខ្ញុំបានធ្វើកម្មសិក្សានៅ Spring Center រយៈពេល ៣ ខែ និងបានសិក្សាអំពីការសហការជាក្រុម ទីផ្សារ និងការគ្រប់គ្រង។',
+    positionKm: 'ខ្ញុំបានធ្វើកម្មសិក្សានៅ Spring Center រយៈពេល 2 ខែ និងបានសិក្សាអំពីការសហការជាក្រុម ទីផ្សារ និងការគ្រប់គ្រង។',
     period: '2025 - 2026',
     description: 'Gained practical experience in a professional work environment, learning about team collaboration, marketing strategies, and project management.',
     descriptionKm: 'ទទួលបានបទពិសោធន៍អនុវត្តនៅក្នុងបរិយាកាសការងារអាជីព រួមមានការសហការជាក្រុម យុទ្ធសាស្ត្រទីផ្សារ និងការគ្រប់គ្រងគម្រោង។',

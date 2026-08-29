@@ -7,6 +7,13 @@ export const certificates = [
     image: '/certificate/Frontend_ETEC.JPG',
   },
   {
+    name: 'Full Stack Web Development (Express.js, React.js)',
+    nameKm: 'ការអភិវឌ្ឍវេប Full Stack',
+    issuer: 'Club Code',
+    date: 'November 2025',
+    image: '/certificate/Club_Code.JPG',
+  },
+  {
     name: 'Web Design Junior',
     nameKm: 'ការរចនា Website កម្រិតដំបូង',
     issuer: 'ISTAD',
